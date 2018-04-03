@@ -31,12 +31,35 @@ set highlight-active-color      "#268bd2" # blue
 
 set default-bg                  "#073642" # base02
 set default-fg                  "#93a1a1" # base1
-#set render-loading              true
-#set render-loading-fg           "#073642" # base02
-#set render-loading-bg           "#073642" # base02
+set render-loading-fg           "#073642" # base02
+set render-loading-bg           "#073642" # base02
 
 #Recolor book content's color
 set recolor                     true
 set recolor-lightcolor          "#073642" # base02
 set recolor-darkcolor           "#93a1a1" # base1
 #set recolor-keephue true 	#to keep original color
+
+#------------------------------ Main options ------------------------------------------
+set selection-clipboard clipboard
+set adjust-open width #defines which auto adjustment mode should be used if a document is loaded. Possible options are "best-fit" and "width".
+set guioptions s #Shows or hide certain GUI elements. Options are 'c' to always show zathura's statusbar and 's' to not always show it.
+#set font "fixedzero normal 9"
+set adjust-open width # default mode to open file. Options are width or best-fit
+set n-completion-items 10 # Defines the maximum number of displayed completion entries. Default is 15.
+set show-scrollbars false
+set window-title-basename true #only shows the filename as the window title
+set statusbar-basename true #only shows the filename as the basebar title
+set statusbar-v-padding 10
+set statusbar-h-padding 4
+set page-padding 10 #the page padding defines the gap in pixels between each rendered page
+set pages-per-row 1
+set render-loading true #Defines if the "Loading..." text should be displayed if a page is rendered.
+set scroll-page-aware true
+set smooth-scroll true
+set scroll-full-overlap 0.01
+set scroll-wrap false #Defines if the last/first page should be wrapped
+set zoom-min 5 #Defines the minimum percentage that the zoom level can be
+set zoom-max 1000 #Defines the maximum percentage that the zoom level can be
+set zoom-step 5 #Defines the amount of percent that is zoomed in or out on each comand.
+#------------------------------ Keybindings ------------------------------------------
