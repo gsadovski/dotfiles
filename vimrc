@@ -123,3 +123,10 @@ set encoding=utf-8
 set showcmd
 "show line number lhs column
 set number
+"Vim will generally autodetect filetypes automatically.  
+"In most cases this works as expected, however, in some cases 
+"it will detect a file with the `tex` suffix as a |plaintex|.
+"To prevent this, one may set the option
+let g:tex_flavor = 'latex'
+"Defines zathura as default pdfviewer to vimtex
+let g:vimtex_view_method = 'zathura'
