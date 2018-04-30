@@ -1,0 +1,10 @@
+[user]
+	email = guilhermesadovski@gmail.com
+	name = gsadovski
+[core]
+	excludesfile = /home/gsadovski/.gitignore_global
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[mergetool]
+	prompt = false

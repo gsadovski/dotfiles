@@ -11,6 +11,8 @@ alias pacman='pacman --color=auto'
 alias grep='grep --color-auto'
 alias vim='vim --servername VIM' # needed for Synctex to work (auto sync between source file and pdf output)
 
+set -o vi #add vi shortcuts to bash
+
 #Custom PS1      gsadovski@dell 
 #		              L ~$
 PS1='\e[38;5;33m \e[1m\u\e[38;5;136m@\h\n              \e[39mL \w\$\e[0m '
