@@ -69,17 +69,18 @@ Plug 'https://github.com/907th/vim-auto-save'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'Valloric/YouCompleteMe'
+Plug 'altercation/vim-colors-solarized'
 call plug#end()
 "
 "START OF PLUGINS SECTION
 "
 "VIM-AUTO-SAVE PLUGIN
 "enable autosave on vim startup
-let g:auto_save = 1
+"let g:auto_save = 1
 "do not display 'saved at hh:mm:ss' on status line on each autosave
 "let g:auto_save_silent=1
 "the events on which autosave will perform a save
-let g:auto_save_events = ["TextChanged","TextChangedI"]
+"let g:auto_save_events = ["TextChanged","TextChangedI"]
 "ULTISNIPS PLUGIN
 "Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<TAB>"
@@ -88,6 +89,11 @@ let g:UltiSnipsJumpBackwardTrigger="<S-TAB>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="horizontal"
 "YOUCOMPLETEME PLUGIN
+"To enable automatic completion with ycm i
+if !exists('g:ycm_semantic_triggers')
+    let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers.tex = g:vimtex#re#youcompleteme
 "When this option is set to 1, YCM will auto-close the preview window after
 "the user accepts the offered completion string.
 let g:ycm_autoclose_preview_window_after_completion = 1
@@ -99,6 +105,10 @@ let g:ycm_key_list_select_completion = ['<Down>']
 let g:ycm_key_list_previous_completion = ['<Up>']
 "search for the vim-snippets snippets
 "let g:UltiSnipsSnippetDirectories="~/.vim/plugged/vim-snipplets"
+"VIM-COLORS-SOLARIZED PLUGING
+let g:solarized_italic=0
+set background=dark
+colorscheme solarized
 "
 " START OF MISC SECTION
 " 
@@ -130,3 +140,4 @@ set number
 let g:tex_flavor = 'latex'
 "Defines zathura as default pdfviewer to vimtex
 let g:vimtex_view_method = 'zathura'
+
