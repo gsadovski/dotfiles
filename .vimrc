@@ -27,7 +27,7 @@ else
 endif
 "
 if &t_Co > 2 || has("gui_running")
-  " Switch on highlighting the last used search pattern.
+" Switch on highlighting the last used search pattern.
   set hlsearch
 endif
 "
@@ -80,7 +80,7 @@ call plug#end()
 "do not display 'saved at hh:mm:ss' on status line on each autosave
 "let g:auto_save_silent=1
 "the events on which autosave will perform a save
-"let g:auto_save_events = ["TextChanged","TextChangedI"]
+"let g:auto_save_events = ["InsertLeave"]
 "ULTISNIPS PLUGIN
 "Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<TAB>"
@@ -89,7 +89,7 @@ let g:UltiSnipsJumpBackwardTrigger="<S-TAB>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="horizontal"
 "YOUCOMPLETEME PLUGIN
-"To enable automatic completion with ycm i
+"To enable automatic completion with ycm 
 if !exists('g:ycm_semantic_triggers')
     let g:ycm_semantic_triggers = {}
 endif
@@ -103,8 +103,10 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_key_list_select_completion = ['<Down>']
 "keybind to cycle backwards through the completion list
 let g:ycm_key_list_previous_completion = ['<Up>']
-"search for the vim-snippets snippets
-"let g:UltiSnipsSnippetDirectories="~/.vim/plugged/vim-snipplets"
+"Define the location of my private snippets
+let g:UltiSnipsSnippetsDir='~/.vim/mysnippets'
+"Define where to look for snipptes
+let g:UltiSnipsSnippetDirectories=['UltiSnips', 'mysnippets']
 "VIM-COLORS-SOLARIZED PLUGING
 let g:solarized_italic=0
 set background=dark
@@ -112,6 +114,8 @@ colorscheme solarized
 "
 " START OF MISC SECTION
 " 
+"disable vi look alike
+set nocompatible
 "enable filetype detection
 filetype on
 "enable filetype-specific indenting
