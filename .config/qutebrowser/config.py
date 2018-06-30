@@ -693,7 +693,7 @@ c.tabs.favicons.scale = 1.0
 
 # Show favicons in the tab bar.
 # Type: Bool
-c.tabs.favicons.show = True
+#c.tabs.favicons.show = True
 
 # How to behave when the last tab is closed.
 # Type: String
@@ -854,7 +854,7 @@ c.url.incdec_segments = ['path', 'query']
 # used by prepending the search engine name to the search term, e.g.
 # `:open google qutebrowser`.
 # Type: Dict
-c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}', 'aw': 'https://wiki.archlinux.org/?search={}', 'tpb': 'https://thepiratebay.org/search/{}', 'w': 'https://en.wikipedia.org/?search={}', 'yt': 'https://youtube.com/results?search_query={}'}
+c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}', 'aw': 'https://wiki.archlinux.org/?search={}', 'tpb': 'https://thepiratebay.org/search/{}', 'w': 'https://en.wikipedia.org/?search={}', 'yt': 'https://youtube.com/results?search_query={}', 'ctan' : 'http://www.ctan.org/search/?phrase={}',}
 
 # Page(s) to open at the start.
 # Type: List of FuzzyUrl, or FuzzyUrl
@@ -866,7 +866,7 @@ c.url.yank_ignored_parameters = ['ref', 'utm_source', 'utm_medium', 'utm_campaig
 
 # Hide the window decoration when using wayland.
 # Type: Bool
-c.window.hide_wayland_decoration = False
+#c.window.hide_wayland_decoration = False
 
 # Format to use for the window title. The same placeholders like for
 # `tabs.title.format` are defined.
