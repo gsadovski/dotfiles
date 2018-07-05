@@ -32,11 +32,7 @@ c.aliases = {
         'q': 'quit', 
         'w': 'session-save', 
         'wq': 'quit --save', 
-        'fb': 'open -t https://facebook.com', 
-        'gm': 'open -t https://mail.google.com/mail/u/0/#inbox', 
-        'ol': 'open -t https://www.overleaf.com/dash', 
-        'yt': 'open -t https://www.youtube.com/', 
-        'wp': 'open -t https://web.whatsapp.com/'
+        'config': 'config-edit'
             }
 
 # Require a confirmation before quitting the application.
@@ -854,7 +850,7 @@ c.url.incdec_segments = ['path', 'query']
 # used by prepending the search engine name to the search term, e.g.
 # `:open google qutebrowser`.
 # Type: Dict
-c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}', 'aw': 'https://wiki.archlinux.org/?search={}', 'tpb': 'https://thepiratebay.org/search/{}', 'w': 'https://en.wikipedia.org/?search={}', 'yt': 'https://youtube.com/results?search_query={}', 'ctan' : 'http://www.ctan.org/search/?phrase={}',}
+c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}', 'aw': 'https://wiki.archlinux.org/?search={}', 'tpb': 'https://thepiratebay.org/search/{}', 'w': 'https://en.wikipedia.org/?search={}', 'yt': 'https://youtube.com/results?search_query={}', 'ctan' : 'http://www.ctan.org/search/?phrase={}', 'doi': 'http://libgen.io/scimag/ads.php?doi={}', 'book': 'http://gen.lib.rus.ec/search.php?req={}', 'hep': 'https://inspirehep.net/search?ln=en&ln=en&p={}'}
 
 # Page(s) to open at the start.
 # Type: List of FuzzyUrl, or FuzzyUrl
