@@ -74,6 +74,12 @@ call plug#end()
 "
 "START OF PLUGINS SECTION
 "
+"VIMTEX
+"Defines zathura as default pdfviewer to vimtex
+let g:vimtex_view_method = 'zathura'
+let g:vimtex_compiler_latexmk = {
+				\'build_dir' : './build_dir',
+				\}
 "VIM-AUTO-SAVE PLUGIN
 "enable autosave on vim startup
 "let g:auto_save = 1
@@ -137,11 +143,19 @@ set encoding=utf-8
 set showcmd
 "show line number lhs column
 set number
+"folding method
+set foldmethod=manual
+" automatically save and restore foldings
+augroup remember_folds
+	  autocmd!
+	  autocmd BufWinLeave * mkview
+	  autocmd BufWinEnter * silent! loadview
+augroup END
 "Vim will generally autodetect filetypes automatically.  
 "In most cases this works as expected, however, in some cases 
+"
 "it will detect a file with the `tex` suffix as a |plaintex|.
 "To prevent this, one may set the option
 let g:tex_flavor = 'latex'
-"Defines zathura as default pdfviewer to vimtex
-let g:vimtex_view_method = 'zathura'
+
 
