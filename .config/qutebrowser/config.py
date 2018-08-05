@@ -120,7 +120,7 @@ c.qt.args = []
 # Force software rendering for QtWebEngine. This is needed for
 # QtWebEngine to work with Nouveau drivers.
 # Type: Bool
-c.qt.force_software_rendering = False
+#c.qt.force_software_rendering = False
 
 # Force a Qt platform to use. This sets the `QT_QPA_PLATFORM`
 # environment variable and is useful to force using the XCB plugin when
@@ -389,7 +389,7 @@ c.completion.use_best_match = False
 # Directory to save downloads to. If unset, a sensible OS-specific
 # default is used.
 # Type: Directory
-c.downloads.location.directory = None
+c.downloads.location.directory = ~/downloads
 
 # Prompt the user for the download location. If set to false,
 # `downloads.location.directory` will be used.
