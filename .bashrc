@@ -10,7 +10,8 @@ alias dir='dir --color=auto'
 alias pacman='pacman --color=auto'
 alias vim='vim --servername VIM' # needed for Synctex to work (auto sync between source file and pdf output)
 
-set -o vi #add vi shortcuts to bash
+#add vi shortcuts to bash
+set -o vi 
 
 #Custom PS1      gsadovski@dell 
 #		              L ~$

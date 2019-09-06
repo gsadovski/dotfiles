@@ -115,7 +115,7 @@ c.backend = 'webengine'
 # https://peter.sh/experiments/chromium-command-line-switches/ for a
 # list) will work.
 # Type: List of String
-c.qt.args = []
+c.qt.args = ["ppapi-widevine-path=/usr/lib64/qt5/plugins/ppapi/libwidevinecdmadapter.so"]
 
 # Force software rendering for QtWebEngine. This is needed for
 # QtWebEngine to work with Nouveau drivers.
@@ -189,7 +189,7 @@ c.content.headers.do_not_track = True
 
 # User agent to send. Unset to send the default.
 # Type: String
-c.content.headers.user_agent = None
+c.content.headers.user_agent = 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:53.0) Gecko/20100101 Firefox/53.0'
 
 # Enable host blocking.
 # Type: Bool
@@ -289,7 +289,7 @@ c.content.netrc_file = None
 
 # Enable plugins in Web pages.
 # Type: Bool
-c.content.plugins = False
+c.content.plugins = True
 
 # Draw the background color and images also when the page is printed.
 # Type: Bool
@@ -371,7 +371,7 @@ c.completion.timestamp_format = '%Y-%m-%d'
 # Number of URLs to show in the web history. 0: no history / -1:
 # unlimited
 # Type: Int
-c.completion.web_history_max_items = -1
+c.completion.web_history.max_items = -1
 
 # Delay (in milliseconds) before updating completions after typing a
 # character.
@@ -389,7 +389,7 @@ c.completion.use_best_match = False
 # Directory to save downloads to. If unset, a sensible OS-specific
 # default is used.
 # Type: Directory
-c.downloads.location.directory = ~/downloads
+c.downloads.location.directory = '~/downloads'
 
 # Prompt the user for the download location. If set to false,
 # `downloads.location.directory` will be used.
@@ -577,7 +577,7 @@ c.prompt.radius = 8
 
 # Show a scrollbar.
 # Type: Bool
-c.scrolling.bar = False
+#c.scrolling.bar = False
 
 # Enable smooth scrolling for web pages. Note smooth scrolling does not
 # work with the `:scroll-px` command.
@@ -850,7 +850,7 @@ c.url.incdec_segments = ['path', 'query']
 # used by prepending the search engine name to the search term, e.g.
 # `:open google qutebrowser`.
 # Type: Dict
-c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}', 'aw': 'https://wiki.archlinux.org/?search={}', 'tpb': 'https://thepiratebay.org/search/{}', 'w': 'https://en.wikipedia.org/?search={}', 'yt': 'https://youtube.com/results?search_query={}', 'ctan' : 'http://www.ctan.org/search/?phrase={}', 'doi': 'http://libgen.io/scimag/ads.php?doi={}', 'book': 'http://gen.lib.rus.ec/search.php?req={}', 'hep': 'https://inspirehep.net/search?ln=en&ln=en&p={}'}
+c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}', 'aw': 'https://wiki.archlinux.org/?search={}', 'tpb': 'https://thepiratebay.org/search/{}', 'w': 'https://en.wikipedia.org/?search={}', 'yt': 'https://youtube.com/results?search_query={}', 'ctan' : 'http://www.ctan.org/search/?phrase={}', 'doi': 'http://gen.lib.rus.ec/scimag/index.php?s={}', 'book': 'http://gen.lib.rus.ec/search.php?req={}', 'hep': 'https://inspirehep.net/search?ln=en&ln=en&p={}'}
 
 # Page(s) to open at the start.
 # Type: List of FuzzyUrl, or FuzzyUrl
